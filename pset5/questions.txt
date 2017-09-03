@@ -1,0 +1,11 @@
+0.  Some sort of lung disease caused by ultra microscopic silicon from a volcano? It's a made up artificially long word.
+1.  getrusage returns the usage of who (?)
+2.  16
+3.  It's more efficient, otherwise the whole struct would be copied.
+4.  For each character (c) in open file (fp), while c is not equal to end of file, check that c is an alphabetic character (upper or lower case) or an apostrophy that is not the first character of the word, add c to a word array and increment index in order to test the length of the word. If the word exceeds maximum length (LENGTH) keep checking for characters while c is still alphabetical and not the end of file. Set index to 0 to start a new word. If there is a number in the word skip it like the previous max length while loop does. If index has not been set to 0 we have found a word, terminate the word array with the null character. Increment the word count, check the spelling. Print the word if it is not found in the dictionary and increment misspellings. Reset index to start new word search.
+5.  to have more control over checking for unusual characters.
+6.  Because they don't change inside the functions scope. scanf functions look group chars seperated by white space characters. (I think)
+7.  I've used Tries, my node struct contains an array of node structs with an isWord int which is 1 or 0 depending on whether it is a word or not.
+8.  alice text took a total of 0.16 secs
+9.  I've made no changes to improve this.
+10. I haven't checked but since my most recent changes my freeHash function is unlikely to be working correctly, I have memory leaks there. I think I could use a recursive function to free each node.

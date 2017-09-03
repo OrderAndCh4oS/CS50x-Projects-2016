@@ -1,0 +1,19 @@
+0.  BMP, GIF and PNG-8 support 256 colours (8 bit), PNG-24 and JPEG support 16777216 colours (24 bit)
+1.  GIF supports Animation
+2.  Lossless compression can be uncompressed without losing any data, Lossy loses information which cannot be recovered.
+3.  GIF, BMP and PNG are lossless, JPEG is Lossy
+4.  The first character of the filename is changed to signify that it has been deleted, the files FAT clusters are moved to the list of free clusters so that they can later be overwritten. In other words, the file data itself is not deleted, the reference to it is changed and the space occupies is freed up for later use.
+5.  The data needs to be overwritten with other data, even then the data may be recoverable using specialised equipment.
+6.  stdint.h provides standard sizes for ints, as actual sizes vary from system to system.
+7.  uint8_t, uint32_t, int32_t, and uint16_t set the sizes of ints, makes the sizes predictable.
+8.  8bits, 32bits, 32bits, 16bits
+9.  0x42 0x4D (BM)
+10. bisize is the total image size (pixels + padding) it doesn't include the colour table. Presumably bfsize does.
+11. It means the files is read top down (that the buffer starts at the top left pixel)
+12. biBitCount sets the bits per pixel, so this would set the limit of the colour depth.
+13. If for some reason or another you couldn't create a file, maybe a permissions problem (eg no write access) would cause this.
+14. Because we are reading one byte at a time.
+15. padding should be 1 if bi.biwidth is 3
+16. fseek moves the cursor by an offset (in our case the size of padding) from a given position (in our case the current cursor position)
+17. SEEK_CUR is the current cursor position
+18. I have no idea who it is.
